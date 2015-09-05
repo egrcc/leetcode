@@ -1,14 +1,14 @@
-class Solution {
-public:
-    void rotate(vector<int>& nums, int k) {
-        k = k % nums.size();
-        while (k > 0) {
-            nums.insert(nums.begin(), *(nums.end() - 1));
-            nums.pop_back();
-            k--;
-        }
-    }
-};
+// class Solution {
+// public:
+//     void rotate(vector<int>& nums, int k) {
+//         k = k % nums.size();
+//         while (k > 0) {
+//             nums.insert(nums.begin(), *(nums.end() - 1));
+//             nums.pop_back();
+//             k--;
+//         }
+//     }
+// };
 
 class Solution {
 public:
