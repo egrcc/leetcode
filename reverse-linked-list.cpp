@@ -69,6 +69,22 @@
 //     }
 // };
 
+// class Solution {
+// public:
+//     ListNode* reverseList(ListNode* head) {
+//         if (head == NULL || head->next == NULL) return head;
+//         ListNode *prior = NULL;
+//         ListNode *current = head;
+//         ListNode *next;
+        
+//         next = current->next;
+//         current->next = prior;
+//         head = reverseList(next);
+//         next->next = current;
+//         return head;
+//     }
+// };
+
 class Solution {
 public:
     ListNode* reverseList(ListNode* head) {
@@ -79,8 +95,8 @@ public:
         
         next = current->next;
         current->next = prior;
-        head = reverseList(next);
+        ListNode *new_head = reverseList(next);
         next->next = current;
-        return head;
+        return new_head;
     }
 };
